@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Bootstrap 5 setup -->
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+	<!-- JS Setup -->
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+     <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Order Form</title>
+    <style>
+
+        body{
+            background-image: url(https://content.presentermedia.com/files/clipart/00032000/32861/tropical_neon_background_800_wht.jpg);
+            background-size: cover;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #menu{
+          background: hsla(182, 64%, 53%, 1);
+
+            background: linear-gradient(90deg, hsla(182, 64%, 53%, 1) 0%, hsla(323, 100%, 65%, 1) 0%, hsla(298, 30%, 58%, 1) 49%, hsla(34, 100%, 60%, 1) 100%);
+
+            background: -moz-linear-gradient(90deg, hsla(182, 64%, 53%, 1) 0%, hsla(323, 100%, 65%, 1) 0%, hsla(298, 30%, 58%, 1) 49%, hsla(34, 100%, 60%, 1) 100%);
+
+            background: -webkit-linear-gradient(90deg, hsla(182, 64%, 53%, 1) 0%, hsla(323, 100%, 65%, 1) 0%, hsla(298, 30%, 58%, 1) 49%, hsla(34, 100%, 60%, 1) 100%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#3BCFD4", endColorstr="#FF4EBB", GradientType=1 );
+            
+            padding: 25px;
+            margin: 60px;
+            border-radius: 25px;
+
+        }
+
+        #orders{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: whitesmoke;
+            text-shadow: 0px 0px 21px rgba(215,96,192,0.6);
+        }
+
+        #details{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: whitesmoke;
+            text-shadow: 0px 0px 21px rgba(215,96,192,0.6);
+        }
+
+        #output{
+            background: hsla(47, 64%, 53%, 1);
+
+            background: hsla(47, 100%, 67%, 1);
+
+            background: radial-gradient(circle, hsla(47, 100%, 67%, 1) 0%, hsla(55, 100%, 47%, 1) 97%);
+
+            background: -moz-radial-gradient(circle, hsla(47, 100%, 67%, 1) 0%, hsla(55, 100%, 47%, 1) 97%);
+
+            background: -webkit-radial-gradient(circle, hsla(47, 100%, 67%, 1) 0%, hsla(55, 100%, 47%, 1) 97%);
+
+            filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FFDA56", endColorstr="#F2DE00", GradientType=1 );
+            
+            padding: 5px;
+            margin: 60px;
+            border-radius: 25px;
+        }
+
+
+        #bar{
+            background-image: url(https://cdn.vectorstock.com/i/500p/91/93/wooden-background-with-green-leaves-vector-18049193.jpg);
+            background-size: cover;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(228, 222, 239);
+            margin-right: 650px; 
+            margin-left: 650px;
+            padding: 5px;
+            border-radius: 30px;
+            text-shadow: 2px 2px 5px rgba(252,123,253,1);
+
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <br/>
+<div id="bar"> 
+    <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+              <a class="nav-link active" href="main.html">~ Home ~</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link active" href="ordering.html">~ Order Now ~</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link active" href="feedback.html">~ Contact us ~</a>
+        </li>
+      </ul>
+</div>
+<br/>
+<div id="menu"class="row">
+    <div id="orders" class="col-md-8">
+<h1>Kacha's Casa Menu</h1>
+<br>
+
+<h2>Menu:</h2>
+    <p>Size:</p>
+    <form>
+        <label>16Oz</label>
+        <input type="radio" id="Large" value="200" name="drinks"><br>
+        <label>12Oz</label>
+        <input type="radio" id="Small" value="150" name="drinks"><br>
+    </form>
+    
+    <p>choose your fruit:</p>
+    <select>
+        <option>Watermelon🍉</option>
+        <option>Banana🍌</option>
+         <option>Mango🥭</option>
+        <option>Coconut🥥</option>
+    </select>
+
+        <br/><br/>
+
+    <p>Add-ons and toppings!</p>
+    <form>
+        <!-- Menu Items -->
+        <label>vanilla syrup</label>
+        <input type="checkbox" id="add-on1" value="50"><br>
+        <label>chocolate syrup</label>
+        <input type="checkbox" id="add-on2" value="50"><br>
+        <label>caramel syrup</label>
+        <input type="checkbox" id="add-on3" value="50"><br>
+        <label>Sprinkles</label>
+        <input type="checkbox" id="topping1" value="100"><br>
+        <label>Marshmallows</label>
+        <input type="checkbox" id="topping2" value="100"><br>
+
+    </div>
+        <!-- Customer Details -->
+    <div id="details" class="col-md-3">
+        <h2>Customer Details:</h2>
+
+        <input type="text" id="name" placeholder="name"> <br>
+        <input type="text" id="place" placeholder="address">
+        <br>
+        <input type="text" id="number" placeholder="phone number"><br><br>
+
+        <img class="img-thumbnail mx-auto d-block" src="https://i.pinimg.com/736x/72/d8/33/72d8333a8bf033fa07149e44aceaf733.jpg" width="300">
+
+
+    </form>
+    </div>
+</div>
+
+<br/>
+    <div id="output" style="white-space: pre-wrap;">
+        <input type="button" value="Order Now" py-click="order_up">
+    </div>
+    <py-script src="order.py"></py-script>
+</center> 
+
+<center>
+<footer><a href="https://aabayon-9e.github.io/2QProfile/" target="blank"> Andrian Joseph Y. Abayon | 9-Emerald</a></footer>
+</center>
+</body>
+</html>
